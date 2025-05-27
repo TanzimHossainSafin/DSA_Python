@@ -1,4 +1,4 @@
-class Concept:
+class BracketBalanceProblem:
     def __init__(self,stack_array):
         self.items_stack=stack_array
     def push(self,item):
@@ -27,7 +27,7 @@ class Concept:
         return "Balanced"
      else:
         return "Imbalanced"
-a=Concept([])
+a=BracketBalanceProblem([])
 print(a.check_bracketBalance("{ {{  }"))
 
 
