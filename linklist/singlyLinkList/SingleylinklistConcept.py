@@ -20,8 +20,22 @@ class LinkListConcept:
        while temp!=None:
           print(temp.value)
           temp=temp.next
-a=LinkListConcept()
+    def prepend(self,value):
+      newNode=Node(value)
+      newNode.next=self.head
+      self.head=newNode
+    def Insert_After_Node(self,prev_node,data):
+       if prev_node is None:
+        return
+       newNode = Node(data)
+       newNode.next = prev_node.next
+       prev_node.next = newNode
+       if self.tail == prev_node:
+        self.tail = newNode
+a = LinkListConcept()
 a.addNode(4)
+a.Insert_After_Node(a.head, -7)
 a.addNode(5)
 a.addNode(7)
+a.Insert_After_Node(a.head.next, 99)
 a.PrintLinkList()
